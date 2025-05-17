@@ -345,3 +345,16 @@ puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
   [1m[35m (13.7ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
   [1m[35m (116.1ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
   [1m[35m (12.8ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE [schema_migrations] ([version] nvarchar(4000) NOT NULL PRIMARY KEY) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE [ar_internal_metadata] ([key] nvarchar(4000) NOT NULL PRIMARY KEY, [value] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (82.5ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('environment', N'development', '05-17-2025 23:29:45.486', '05-17-2025 23:29:45.486') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Migrating to CreateCoins (20250509001636)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE [coins] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [description] nvarchar(4000), [acronym] nvarchar(4000), [url_image] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (54.0ms)[0m  [1m[32mINSERT INTO [schema_migrations] ([version]) OUTPUT INSERTED.[version] VALUES (N'20250509001636') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (121.8ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
