@@ -358,3 +358,155 @@ Migrating to CreateCoins (20250509001636)
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
   [1m[36mExecute Procedure (121.8ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
+Started GET "/" for 127.0.0.1 at 2025-05-17 20:32:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 1568ms (Views: 6.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coin" for 127.0.0.1 at 2025-05-17 20:32:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/coin"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-17 20:32:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/coins" for 127.0.0.1 at 2025-05-17 20:33:04 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (16.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:8
+  Rendered coins/index.html.erb within layouts/application (Duration: 19.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 160.6ms | GC: 0.0ms)
+Completed 200 OK in 1228ms (Views: 179.9ms | ActiveRecord: 17.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-05-17 20:33:05 -0300
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-05-17 20:33:05 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-05-17 20:33:05 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-05-17 20:33:06 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-05-17 20:33:06 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-05-17 20:33:06 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-05-17 20:33:06 -0300
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-05-17 20:33:06 -0300
+Started GET "/coins/new" for 127.0.0.1 at 2025-05-17 20:34:08 -0300
+Processing by CoinsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 54.8ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 83.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 84.5ms | GC: 0.0ms)
+Completed 200 OK in 1113ms (Views: 85.2ms | ActiveRecord: 177.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/coins" for 127.0.0.1 at 2025-05-17 20:34:32 -0300
+Processing by CoinsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "coin"=>{"description"=>"testcoin", "acronym"=>"dasdad", "url_image"=>"image"}, "commit"=>"Create Coin"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN TRANSACTION /*action='create',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:27:in `block in create'
+  [1m[36mCoin Create (61.6ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'testcoin', N'dasdad', N'image', '05-17-2025 23:34:33.61957', '05-17-2025 23:34:33.61957') /*action='create',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/coins/1
+Completed 302 Found in 828ms (ActiveRecord: 135.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-05-17 20:34:33 -0300
+Processing by CoinsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (9.8ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 19.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | GC: 0.0ms)
+Completed 200 OK in 781ms (Views: 21.1ms | ActiveRecord: 9.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-05-17 20:36:30 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:8
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 726ms (Views: 4.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/coins/1" for 127.0.0.1 at 2025-05-17 20:36:31 -0300
+Processing by CoinsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mCoin Destroy (3.1ms)[0m  [1m[31mDELETE FROM [coins] WHERE [coins].[id] = 1; SELECT @@ROWCOUNT AS AffectedRows /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/coins
+Completed 303 See Other in 761ms (ActiveRecord: 5.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-05-17 20:36:31 -0300
+Processing by CoinsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:8
+  Rendered coins/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 734ms (Views: 3.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-22 19:58:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 1748ms (Views: 67.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2025-05-22 19:58:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-22 19:58:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/home/index" for 127.0.0.1 at 2025-05-22 19:59:11 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 137.8ms | GC: 0.0ms)
+Completed 200 OK in 1271ms (Views: 172.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-05-22 19:59:12 -0300
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-05-22 19:59:12 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-05-22 19:59:12 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-05-22 19:59:13 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-05-22 19:59:13 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-05-22 19:59:13 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-05-22 19:59:13 -0300
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-05-22 19:59:13 -0300
+Started GET "/home/index" for 127.0.0.1 at 2025-05-22 19:59:53 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 118.6ms | GC: 0.0ms)
+Completed 200 OK in 839ms (Views: 125.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2025-05-22 20:01:11 -0300
