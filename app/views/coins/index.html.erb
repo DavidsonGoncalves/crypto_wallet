@@ -4,13 +4,30 @@
 
 <h1>Coins</h1>
 
-<div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show this coin", coin %>
-    </p>
-  <% end %>
-</div>
+<table>
+
+  <thead>
+    <tr>
+      <th style="padding-right: 30px;">Name</th>
+      <th style = "padding-right: 30px;"> Symbol</th>
+      <th >Image</th>
+      <th ></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coins.each do |coin| %>
+      <tr>
+        <td><%= coin.description %></td>
+        <td "><%= coin.acronym %></td>
+        <td ><%= image_tag coin.url_image, size: "30x30" %></td>
+        <td>
+          <%= link_to "Show", coin_path(coin) %>
+          <%= link_to "Edit", edit_coin_path(coin) %>
+          <%= link_to "Destroy", coin_path(coin), method: :delete, data: { confirm: "Are you sure?" } %>
+      </tr>
+    <% end %>
+  </tbody>
+
 
 <%= link_to "New coin", new_coin_path %>
