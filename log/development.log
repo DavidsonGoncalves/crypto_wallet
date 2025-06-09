@@ -1164,3 +1164,278 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 2292ms (Views: 249.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[35m (16.2ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (24.2ms)[0m  [1m[35mDROP DATABASE [cryptodb_development] /*application='CryptoWallet'*/[0m
+  [1m[35m (15.8ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (121.4ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (147.4ms)[0m  [1m[35mEXEC sp_fkeys @pktable_name = N'coins'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS [coins] /*application='CryptoWallet'*/[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE [coins] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [description] nvarchar(4000), [acronym] nvarchar(4000), [url_image] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE [schema_migrations] ([version] nvarchar(4000) NOT NULL PRIMARY KEY) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (81.8ms)[0m  [1m[32mINSERT INTO [schema_migrations] (version) VALUES (20250509001636) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE [ar_internal_metadata] ([key] nvarchar(4000) NOT NULL PRIMARY KEY, [value] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (53.3ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('environment', N'development', '06-09-2025 18:53:54.496', '06-09-2025 18:53:54.496') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'schema_sha1' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('schema_sha1', N'1d1bae92b7e6b1cea42fdec552bdc935bc61e932', '06-09-2025 18:53:54.556', '06-09-2025 18:53:54.556') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (139.5ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
+Started GET "/" for 127.0.0.1 at 2025-06-09 15:56:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_welcome.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered home/index.html.erb within layouts/application (Duration: 13.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 162.6ms | GC: 0.0ms)
+Completed 200 OK in 2215ms (Views: 222.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 15:56:55 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (44.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 132.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 133.1ms | GC: 0.0ms)
+Completed 200 OK in 1083ms (Views: 94.1ms | ActiveRecord: 44.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (64.7ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Bitcoin', N'BTC', N'https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png', '06-09-2025 18:59:23.146037', '06-09-2025 18:59:23.146037') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.9ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Etherium', N'ETH', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s', '06-09-2025 18:59:23.21607', '06-09-2025 18:59:23.21607') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.9ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Dash', N'DASH', N'https://gallery.yopriceville.com/downloadfullsize/send/21848', '06-09-2025 18:59:23.224795', '06-09-2025 18:59:23.224795') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 15:59:38 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (56.7ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 255.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 275.2ms | GC: 0.0ms)
+Completed 200 OK in 1839ms (Views: 52.3ms | ActiveRecord: 234.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 20:05:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (66.7ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 283.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 305.0ms | GC: 0.0ms)
+Completed 200 OK in 1876ms (Views: 56.3ms | ActiveRecord: 261.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-09 20:34:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_welcome.html.erb (Duration: 8.4ms | GC: 0.0ms)
+  Rendered home/index.html.erb within layouts/application (Duration: 20.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 166.4ms | GC: 0.0ms)
+Completed 200 OK in 2267ms (Views: 244.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 20:34:57 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (48.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 362.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 364.4ms | GC: 0.0ms)
+Completed 200 OK in 1322ms (Views: 121.0ms | ActiveRecord: 248.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/2" for 127.0.0.1 at 2025-06-09 20:35:00 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCoin Load (2.0ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 2 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 143.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 143.9ms | GC: 0.0ms)
+Completed 200 OK in 957ms (Views: 144.4ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-06-09 20:35:03 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 746ms (Views: 2.3ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/coins/1" for 127.0.0.1 at 2025-06-09 20:35:05 -0300
+Processing by CoinsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mCoin Destroy (3.7ms)[0m  [1m[31mDELETE FROM [coins] WHERE [coins].[id] = 1; SELECT @@ROWCOUNT AS AffectedRows /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/coins
+Completed 303 See Other in 757ms (ActiveRecord: 5.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 20:35:06 -0300
+Processing by CoinsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 752ms (Views: 3.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/2" for 127.0.0.1 at 2025-06-09 20:35:10 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 2 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 777ms (Views: 2.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/coins/2" for 127.0.0.1 at 2025-06-09 20:35:12 -0300
+Processing by CoinsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mCoin Load (1.0ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 2 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mCoin Destroy (2.4ms)[0m  [1m[31mDELETE FROM [coins] WHERE [coins].[id] = 2; SELECT @@ROWCOUNT AS AffectedRows /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/coins
+Completed 303 See Other in 814ms (ActiveRecord: 4.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 20:35:13 -0300
+Processing by CoinsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 770ms (Views: 4.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/3" for 127.0.0.1 at 2025-06-09 20:35:15 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 3 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 784ms (Views: 2.0ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/coins/3" for 127.0.0.1 at 2025-06-09 20:35:16 -0300
+Processing by CoinsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 3 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mCoin Destroy (1.9ms)[0m  [1m[31mDELETE FROM [coins] WHERE [coins].[id] = 3; SELECT @@ROWCOUNT AS AffectedRows /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/coins
+Completed 303 See Other in 791ms (ActiveRecord: 4.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-06-09 20:35:17 -0300
+Processing by CoinsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 826ms (Views: 3.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[35m (14.5ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (17.5ms)[0m  [1m[35mDROP DATABASE [cryptodb_development] /*application='CryptoWallet'*/[0m
+  [1m[35m (11.2ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (95.9ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (126.6ms)[0m  [1m[35mEXEC sp_fkeys @pktable_name = N'coins'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS [coins] /*application='CryptoWallet'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE [coins] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [description] nvarchar(4000), [acronym] nvarchar(4000), [url_image] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE [schema_migrations] ([version] nvarchar(4000) NOT NULL PRIMARY KEY) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (75.8ms)[0m  [1m[32mINSERT INTO [schema_migrations] (version) VALUES (20250509001636) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE [ar_internal_metadata] ([key] nvarchar(4000) NOT NULL PRIMARY KEY, [value] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (52.9ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('environment', N'development', '06-09-2025 23:48:22.823', '06-09-2025 23:48:22.823') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'schema_sha1' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('schema_sha1', N'1d1bae92b7e6b1cea42fdec552bdc935bc61e932', '06-09-2025 23:48:22.882', '06-09-2025 23:48:22.882') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (0.6ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (4.9ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Bitcoin', N'BTC', N'https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png', '06-09-2025 23:48:23.511993', '06-09-2025 23:48:23.511993') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.4ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Etherium', N'ETH', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s', '06-09-2025 23:48:23.529139', '06-09-2025 23:48:23.529139') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.5ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Dash', N'DASH', N'https://gallery.yopriceville.com/downloadfullsize/send/21848', '06-09-2025 23:48:23.536801', '06-09-2025 23:48:23.536801') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
