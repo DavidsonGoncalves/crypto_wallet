@@ -4,13 +4,28 @@
 
 <h1>Mining types</h1>
 
-<div id="mining_types">
-  <% @mining_types.each do |mining_type| %>
-    <%= render mining_type %>
-    <p>
-      <%= link_to "Show this mining type", mining_type %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th style="padding-right: 30px;">Name</th>
+      <th style="padding-right: 30px;">Acronym</th>
+  </thead>
+  <tbody>
+    <%@mining_types.each do |mining_type|%>
+    <tr>
+    <td><%= mining_type.name%></td>
+    <td><%= mining_type.acronym%></td>
+    <td>
+      <%= link_to "Show", mining_type_path(mining_type) %>
+      <%= link_to "Edit", edit_mining_type_path(mining_type) %>
+      <%= link_to "Destroy", mining_type_path(mining_type), method: :delete, data: { confirm: "Are you sure?" } %>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+
+
 
 <%= link_to "New mining type", new_mining_type_path %>
