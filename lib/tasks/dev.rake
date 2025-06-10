@@ -3,13 +3,20 @@ namespace :dev do
   task setup: :environment do
     if(Rails.env.development?)
 
-    spinner = TTY::Spinner.new("[:spinner] Loading: ", format: :pong)
-    spinner.auto_spin
-    %x(rails db:drop db:create db:migrate db:seed)
-    spinner.stop("Database setup complete. Migrations run and seed data loaded")
+    active_spinner("Dropping Database...") {%x(rails db:drop)}
+    active_spinner("Creating Database...") {%x(db:create)}
+    active_spinner("Migrating Database...") {%x(db:migrate)}
+    active_spinner("Populating Database...") {%x(db:seed)}
     else
       puts "This task is only for the development environment."
     end
+  end
+
+  def active_spinner(type_message,end_message = "Done!")
+    spinner = TTY::Spinner.new("[:spinner] #{type_message}", format: :classic, hide_cursor: true)
+    spinner.auto_spin
+    yield
+    spinner.success(end_message)
   end
 
 end
