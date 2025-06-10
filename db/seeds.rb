@@ -9,21 +9,32 @@
 #   end
 
 
+coins = [
+  {
+    description: "Bitcoin",
+    acronym: "BTC",
+    url_image: "https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png"
+  },
+  {
+    description: "Etherium",
+    acronym: "ETH",
+    url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s"
+  },
+  {
+    description: "Dash",
+    acronym: "DASH",
+    url_image: "https://gallery.yopriceville.com/downloadfullsize/send/21848"
+  }
+]
 
-Coin.create!(
-  description: "Bitcoin",
-  acronym: "BTC",
-  url_image: "https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png"
-)
+spinner = TTY::Spinner.new("[:spinner] Seeding database...", format: :classic, hide_cursor: true)
+spinner.auto_spin
 
-Coin.create!(
-  description: "Etherium",
-  acronym: "ETH",
-  url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s"
-)
+coins.each do |coin|
+  Coin.find_or_create_by!(coin)
+end
 
-Coin.create!(
-  description: "Dash",
-  acronym: "DASH",
-  url_image: "https://gallery.yopriceville.com/downloadfullsize/send/21848"
-)
+spinner.success("Database seeded successfully!")
+
+
+

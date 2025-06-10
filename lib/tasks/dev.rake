@@ -12,6 +12,7 @@ namespace :dev do
     end
   end
 
+  private
   def active_spinner(type_message,end_message = "Done!")
     spinner = TTY::Spinner.new("[:spinner] #{type_message}", format: :classic, hide_cursor: true)
     spinner.auto_spin
