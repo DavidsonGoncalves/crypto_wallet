@@ -1439,3 +1439,117 @@ Completed 200 OK in 826ms (Views: 3.6ms | ActiveRecord: 0.4ms (1 query, 0 cached
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
   [1m[36mCoin Create (3.5ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Dash', N'DASH', N'https://gallery.yopriceville.com/downloadfullsize/send/21848', '06-09-2025 23:48:23.536801', '06-09-2025 23:48:23.536801') /*application='CryptoWallet'*/[0m
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[35m (13.2ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (16.7ms)[0m  [1m[35mDROP DATABASE [cryptodb_development] /*application='CryptoWallet'*/[0m
+  [1m[35m (12.3ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (99.8ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[35m (23.9ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (119.7ms)[0m  [1m[35mEXEC sp_fkeys @pktable_name = N'coins'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS [coins] /*application='CryptoWallet'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE [coins] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [description] nvarchar(4000), [acronym] nvarchar(4000), [url_image] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE [schema_migrations] ([version] nvarchar(4000) NOT NULL PRIMARY KEY) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (63.0ms)[0m  [1m[32mINSERT INTO [schema_migrations] (version) VALUES (20250509001636) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE [ar_internal_metadata] ([key] nvarchar(4000) NOT NULL PRIMARY KEY, [value] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (49.4ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('environment', N'development', '06-10-2025 00:11:44.083', '06-10-2025 00:11:44.083') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'schema_sha1' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('schema_sha1', N'1d1bae92b7e6b1cea42fdec552bdc935bc61e932', '06-10-2025 00:11:44.14', '06-10-2025 00:11:44.14') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (0.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (5.2ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Bitcoin', N'BTC', N'https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png', '06-10-2025 00:11:44.573965', '06-10-2025 00:11:44.573965') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.7ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Etherium', N'ETH', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s', '06-10-2025 00:11:44.591628', '06-10-2025 00:11:44.591628') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.9ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Dash', N'DASH', N'https://gallery.yopriceville.com/downloadfullsize/send/21848', '06-10-2025 00:11:44.608742', '06-10-2025 00:11:44.608742') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[35m (15.4ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (16.0ms)[0m  [1m[35mDROP DATABASE [cryptodb_development] /*application='CryptoWallet'*/[0m
+  [1m[35m (12.2ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (104.1ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (121.0ms)[0m  [1m[35mEXEC sp_fkeys @pktable_name = N'coins'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS [coins] /*application='CryptoWallet'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE [coins] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [description] nvarchar(4000), [acronym] nvarchar(4000), [url_image] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE [schema_migrations] ([version] nvarchar(4000) NOT NULL PRIMARY KEY) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (63.9ms)[0m  [1m[32mINSERT INTO [schema_migrations] (version) VALUES (20250509001636) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE [ar_internal_metadata] ([key] nvarchar(4000) NOT NULL PRIMARY KEY, [value] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (51.1ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('environment', N'development', '06-10-2025 00:12:17.996', '06-10-2025 00:12:17.996') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'schema_sha1' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('schema_sha1', N'1d1bae92b7e6b1cea42fdec552bdc935bc61e932', '06-10-2025 00:12:18.053', '06-10-2025 00:12:18.053') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (0.8ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (6.3ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Bitcoin', N'BTC', N'https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png', '06-10-2025 00:12:18.484357', '06-10-2025 00:12:18.484357') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.3ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Etherium', N'ETH', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s', '06-10-2025 00:12:18.495367', '06-10-2025 00:12:18.495367') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.2ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Dash', N'DASH', N'https://gallery.yopriceville.com/downloadfullsize/send/21848', '06-10-2025 00:12:18.510769', '06-10-2025 00:12:18.510769') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[35m (12.8ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (14.8ms)[0m  [1m[35mDROP DATABASE [cryptodb_development] /*application='CryptoWallet'*/[0m
+  [1m[35m (11.5ms)[0m  [1m[35mALTER DATABASE [cryptodb_development] SET SINGLE_USER WITH ROLLBACK IMMEDIATE /*application='CryptoWallet'*/[0m
+  [1m[35m (107.1ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE DATABASE [cryptodb_development]   /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (117.2ms)[0m  [1m[35mEXEC sp_fkeys @pktable_name = N'coins'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS [coins] /*application='CryptoWallet'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE [coins] ([id] bigint NOT NULL IDENTITY(1,1) PRIMARY KEY, [description] nvarchar(4000), [acronym] nvarchar(4000), [url_image] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE [schema_migrations] ([version] nvarchar(4000) NOT NULL PRIMARY KEY) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (64.1ms)[0m  [1m[32mINSERT INTO [schema_migrations] (version) VALUES (20250509001636) /*application='CryptoWallet'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE [ar_internal_metadata] ([key] nvarchar(4000) NOT NULL PRIMARY KEY, [value] nvarchar(4000), [created_at] datetime2(6) NOT NULL, [updated_at] datetime2(6) NOT NULL) /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (50.0ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('environment', N'development', '06-10-2025 00:12:49.44', '06-10-2025 00:12:49.44') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'schema_sha1' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO [ar_internal_metadata] ([key], [value], [created_at], [updated_at]) OUTPUT INSERTED.[key] VALUES ('schema_sha1', N'1d1bae92b7e6b1cea42fdec552bdc935bc61e932', '06-10-2025 00:12:49.506', '06-10-2025 00:12:49.506') /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM [ar_internal_metadata] WHERE [ar_internal_metadata].[key] = 'environment' ORDER BY [ar_internal_metadata].[key] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') /*application='CryptoWallet'*/[0m
+  [1m[36mExecute Procedure (0.7ms)[0m  [1m[35mEXEC sp_fkeys NULL, NULL, NULL, N'coins', NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (5.9ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Bitcoin', N'BTC', N'https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png', '06-10-2025 00:12:49.93233', '06-10-2025 00:12:49.93233') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (3.3ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Etherium', N'ETH', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s', '06-10-2025 00:12:49.943847', '06-10-2025 00:12:49.943847') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN TRANSACTION /*application='CryptoWallet'*/[0m
+  [1m[36mCoin Create (4.1ms)[0m  [1m[32mINSERT INTO [coins] ([description], [acronym], [url_image], [created_at], [updated_at]) OUTPUT INSERTED.[id] VALUES (N'Dash', N'DASH', N'https://gallery.yopriceville.com/downloadfullsize/send/21848', '06-10-2025 00:12:49.951261', '06-10-2025 00:12:49.951261') /*application='CryptoWallet'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='CryptoWallet'*/[0m

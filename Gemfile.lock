@@ -318,6 +318,9 @@ GEM
       bigdecimal (~> 3)
     tiny_tds (3.2.1-x86_64-linux-gnu)
       bigdecimal (~> 3)
+    tty-cursor (0.7.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
     turbo-rails (2.0.13)
       actionpack (>= 7.1.0)
       railties (>= 7.1.0)
@@ -371,6 +374,7 @@ DEPENDENCIES
   stimulus-rails
   thruster
   tiny_tds
+  tty-spinner
   turbo-rails
   tzinfo-data
   web-console
