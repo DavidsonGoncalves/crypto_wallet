@@ -6,6 +6,7 @@ namespace :dev do
       active_spinner("Creating Database...") { %x(rails db:create) }
       active_spinner("Migrating Database...") { %x(rails db:migrate) }
       %x(rails dev:import_coins)
+      %x(rails dev:import_mining_type)
     else
       puts "This task is only for the development environment."
     end
@@ -39,6 +40,30 @@ namespace :dev do
       end
     else
       puts "This task is only for the development environment."
+    end
+  end
+
+  desc "Import Mining Types"
+  task import_mining_type: :environment do
+    if Rails.env.development?
+      active_spinner("Importing Mining Types...") do
+
+        mining_types = [
+          {
+            name: "Pool of Mining",
+            acronym: "POW",
+          },
+          {
+            name: "Proof of Stake",
+            acronym: "POS"
+          }
+        ]
+        mining_types.each do |mining_type|
+          MiningType.find_or_create_by!(mining_type)
+        end
+      end
+    else
+     puts "This task is only for the development environment."
     end
   end
 end
