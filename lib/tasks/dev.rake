@@ -50,11 +50,11 @@ namespace :dev do
 
         mining_types = [
           {
-            name: "Pool of Mining",
+            description: "Pool of Mining",
             acronym: "POW",
           },
           {
-            name: "Proof of Stake",
+            description: "Proof of Stake",
             acronym: "POS"
           }
         ]

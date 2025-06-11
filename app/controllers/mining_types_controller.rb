@@ -65,6 +65,6 @@ class MiningTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mining_type_params
-      params.expect(mining_type: [ :name, :acronym ])
+      params.expect(mining_type: [ :description, :acronym ])
     end
 end
