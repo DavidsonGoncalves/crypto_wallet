@@ -5,8 +5,8 @@ namespace :dev do
       active_spinner("Dropping Database...") { %x(rails db:drop) }
       active_spinner("Creating Database...") { %x(rails db:create) }
       active_spinner("Migrating Database...") { %x(rails db:migrate) }
-      %x(rails dev:import_coins)
       %x(rails dev:import_mining_type)
+      %x(rails dev:import_coins)
     else
       puts "This task is only for the development environment."
     end
@@ -20,17 +20,20 @@ namespace :dev do
           {
             description: "Bitcoin",
             acronym: "BTC",
-            url_image: "https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png"
+            url_image: "https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png",
+            mining_type: MiningType.find_by(acronym: "POW")
           },
           {
             description: "Etherium",
             acronym: "ETH",
-            url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s"
+            url_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JfenCFa1c9KP4-LQZ1TzP-tMMPiXYG1NyQ&s",
+            mining_type: MiningType.all.sample
           },
           {
             description: "Dash",
             acronym: "DASH",
-            url_image: "https://gallery.yopriceville.com/downloadfullsize/send/21848"
+            url_image: "https://gallery.yopriceville.com/downloadfullsize/send/21848",
+            mining_type: MiningType.all.sample
           }
         ]
 
