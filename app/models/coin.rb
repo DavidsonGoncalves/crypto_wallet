@@ -1,3 +1,3 @@
 class Coin < ApplicationRecord
-  belong_to :mining_type
+  belongs_to :mining_type
 end
