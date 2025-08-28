@@ -6438,3 +6438,246 @@ Processing by CoinsController#show as TURBO_STREAM
 Completed 200 OK in 988ms (Views: 2.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/coins/1" for 127.0.0.1 at 2025-08-28 20:09:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 19.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | GC: 0.2ms)
+Completed 200 OK in 2245ms (Views: 91.0ms | ActiveRecord: 241.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-08-28 20:09:44 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (2.1ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  [1m[36mMiningType Load (2.1ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/_form.html.erb:31:in `map'
+  Rendered coins/_form.html.erb (Duration: 204.2ms | GC: 0.2ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 209.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 210.1ms | GC: 0.2ms)
+Completed 200 OK in 1168ms (Views: 34.2ms | ActiveRecord: 178.7ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:09:47 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.9ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 983ms (Views: 5.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-08-28 20:09:49 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-08-28 20:09:50 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 1224ms (Views: 7.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-08-28 20:09:51 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  [1m[36mMiningType Load (1.7ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/_form.html.erb:31:in `map'
+  Rendered coins/_form.html.erb (Duration: 6.9ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 10.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 0.0ms)
+Completed 200 OK in 1625ms (Views: 14.6ms | ActiveRecord: 3.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 1296ms (Views: 2.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-08-28 20:09:52 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 958ms (Views: 2.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/coins/1" for 127.0.0.1 at 2025-08-28 20:09:54 -0300
+Processing by CoinsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://png.pngtree.com/png-clipart/20211212/original/pngtree-bitcoin-png-png-image_6961160.png", "mining_type_id"=>"2"}, "commit"=>"Update Coin", "id"=>"1"}
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:09:55 -0300
+Processing by CoinsController#index as HTML
+  [1m[36mCoin Load (1.8ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='update',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN TRANSACTION /*action='update',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:40:in `block in update'
+  [1m[36mMiningType Load (47.6ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] WHERE [mining_types].[id] = 2 ORDER BY [mining_types].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='update',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:40:in `block in update'
+  [1m[36mCoin Update (15.2ms)[0m  [1m[33mUPDATE [coins] SET [updated_at] = '08-28-2025 23:09:56.385198', [mining_type_id] = 2 WHERE [coins].[id] = 1; SELECT @@ROWCOUNT AS AffectedRows /*action='update',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (193.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/coins/1
+Completed 302 Found in 1711ms (ActiveRecord: 259.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-08-28 20:09:56 -0300
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.7ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 1343ms (Views: 5.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by CoinsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 960ms (Views: 3.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:10:00 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 928ms (Views: 4.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/3" for 127.0.0.1 at 2025-08-28 20:10:01 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"3"}
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-08-28 20:10:02 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.7ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 3 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 0.0ms)
+Completed 200 OK in 1081ms (Views: 11.5ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  [1m[36mMiningType Load (0.4ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/_form.html.erb:31:in `map'
+  Rendered coins/_form.html.erb (Duration: 4.8ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 998ms (Views: 6.5ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/2" for 127.0.0.1 at 2025-08-28 20:10:03 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 2 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:63:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 948ms (Views: 2.2ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:11:19 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (19.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 23.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | GC: 0.0ms)
+Completed 200 OK in 962ms (Views: 5.8ms | ActiveRecord: 19.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:11:21 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 875ms (Views: 4.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:11:22 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 885ms (Views: 4.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-08-28 20:11:24 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 917ms (Views: 3.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/new" for 127.0.0.1 at 2025-08-28 20:11:29 -0300
+Processing by CoinsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (1.1ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='new',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/_form.html.erb:31:in `map'
+  Rendered coins/_form.html.erb (Duration: 5.1ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 6.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 884ms (Views: 6.9ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
