@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :mining_type_id, style: "display: block" %>
-    <%= form.select("mining_type_id", MiningType.all.map { |m| [m.description, m.id] }, {include_blank: 'select...'} ) %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
   </div>
 
   <div class="actions">

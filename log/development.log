@@ -6681,3 +6681,265 @@ Processing by CoinsController#new as HTML
 Completed 200 OK in 884ms (Views: 6.9ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/coins/new" for 127.0.0.1 at 2025-08-28 20:24:30 -0300
+Processing by CoinsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 50.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1072ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", MiningType.all.pluck{ :description, :id }, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:31: syntax error, unexpected ',', expecting '}'
+...ngType.all.pluck{ :description, :id }, {include_blank: 'sele...
+...                              ^
+C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", MiningType.all.pluck{ :description, :id }, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: coin) do |form| %>
+2:      <% if coin.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% coin.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :description, style: "display: block" %>
+16:        <%= form.text_field :description %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :acronym, style: "display: block" %>
+21:        <%= form.text_field :acronym %>
+22:      </div>
+23:    
+24:      <div class ="field">
+25:        <%= form.label :url_image, style: "display: block" %>
+26:        <%= form.text_field :url_image %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :mining_type_id, style: "display: block" %>
+31:        <%= form.select("mining_type_id", MiningType.all.pluck{ :description, :id }, {include_blank: 'select...'} ) %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit %>
+36:      </div>
+37:    <% end %>
+  
+app/views/coins/_form.html.erb:31: syntax error, unexpected ',', expecting '}'
+app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+app/views/coins/new.html.erb:5
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:31: syntax error, unexpected ',', expecting '}'
+...ngType.all.pluck{ :description, :id }, {include_blank: 'sele...
+...                              ^
+C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+          end
+          ^~~
+):
+  
+app/views/coins/_form.html.erb:31: syntax error, unexpected ',', expecting '}'
+app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+app/views/coins/new.html.erb:5
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-08-28 20:24:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/coins/new" for 127.0.0.1 at 2025-08-28 20:24:53 -0300
+Processing by CoinsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Pluck (63.9ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='new',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (Duration: 71.2ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 109.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 117.9ms | GC: 0.0ms)
+Completed 200 OK in 1103ms (Views: 61.8ms | ActiveRecord: 64.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/new" for 127.0.0.1 at 2025-08-28 20:30:21 -0300
+Processing by CoinsController#new as HTML
+Completed 404 Not Found in 916ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+AbstractController::ActionNotFound (The :new, action could not be found for the :set_mining_type_options
+callback on CoinsController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (8.0.2) lib/active_support/callbacks.rb:384:in `block in make_lambda'
+activesupport (8.0.2) lib/active_support/callbacks.rb:177:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:177:in `all?'
+activesupport (8.0.2) lib/active_support/callbacks.rb:177:in `call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (8.0.2) lib/active_support/callbacks.rb:559:in `each'
+activesupport (8.0.2) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (8.0.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+turbo-rails (2.0.13) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.13) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in `block in run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in `run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in `process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.14) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.14) lib/rack/etag.rb:29:in `call'
+rack (3.1.14) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.14) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.14) lib/rack/method_override.rb:28:in `call'
+rack (3.1.14) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.14) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
