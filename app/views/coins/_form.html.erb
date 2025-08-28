@@ -11,22 +11,27 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :acronym, style: "display: block" %>
     <%= form.text_field :acronym %>
   </div>
 
-  <div>
+  <div class ="field">
     <%= form.label :url_image, style: "display: block" %>
     <%= form.text_field :url_image %>
   </div>
 
-  <div>
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", MiningType.all.map { |m| [m.description, m.id] }, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
