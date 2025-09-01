@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :description, t('desctiption'), style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :acronym, style: "display: block" %>
+    <%= form.label :acronym,t('acronym'), style: "display: block" %>
     <%= form.text_field :acronym %>
   </div>
 
   <div class ="field">
-    <%= form.label :url_image, style: "display: block" %>
+    <%= form.label :url_image, t('url_image'), style: "display: block" %>
     <%= form.text_field :url_image %>
   </div>
 
   <div class="field">
-    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.label :mining_type_id, t('mining_type') ,style: "display: block" %>
     <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t('crud.submit')%>
   </div>
 <% end %>

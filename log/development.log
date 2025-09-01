@@ -7104,3 +7104,1622 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 904ms (Views: 43.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-09-01 15:55:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_welcome.html.erb (Duration: 153.1ms | GC: 0.0ms)
+  Rendered home/index.html.erb within layouts/application (Duration: 165.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 403.9ms | GC: 0.2ms)
+Completed 200 OK in 2972ms (Views: 519.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 15:55:14 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (69.0ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 402.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 403.7ms | GC: 0.0ms)
+Completed 200 OK in 1623ms (Views: 140.3ms | ActiveRecord: 269.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 15:55:25 -0300
+Processing by CoinsController#index as HTML
+Started GET "/mining_types" for 127.0.0.1 at 2025-09-01 15:55:25 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 1511ms (Views: 12.2ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.6ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='index',application='CryptoWallet',controller='mining_types'*/[0m
+  ↳ app/views/mining_types/index.html.erb:8
+  Rendered mining_types/_mining_type.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered mining_types/_mining_type.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered mining_types/index.html.erb within layouts/application (Duration: 188.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 189.3ms | GC: 0.0ms)
+Completed 200 OK in 1573ms (Views: 38.9ms | ActiveRecord: 156.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2025-09-01 15:55:27 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.5ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='index',application='CryptoWallet',controller='mining_types'*/[0m
+  ↳ app/views/mining_types/index.html.erb:8
+  Rendered mining_types/_mining_type.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered mining_types/_mining_type.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered mining_types/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 929ms (Views: 4.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2025-09-01 15:55:29 -0300
+Processing by MiningTypesController#index as HTML
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 15:55:29 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.5ms)[0m  [1m[34mSELECT [mining_types].* FROM [mining_types] /*action='index',application='CryptoWallet',controller='mining_types'*/[0m
+  ↳ app/views/mining_types/index.html.erb:8
+  Rendered mining_types/_mining_type.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered mining_types/_mining_type.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered mining_types/index.html.erb within layouts/application (Duration: 11.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 0.0ms)
+Completed 200 OK in 1451ms (Views: 14.3ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 15:55:30 -0300
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 15:55:31 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | GC: 0.0ms)
+Completed 200 OK in 1633ms (Views: 11.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (2.7ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 26.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | GC: 0.2ms)
+Completed 200 OK in 1787ms (Views: 31.5ms | ActiveRecord: 2.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 15:55:33 -0300
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (0.8ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 120.5ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 130.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 134.5ms | GC: 0.0ms)
+Completed 200 OK in 1750ms (Views: 136.8ms | ActiveRecord: 2.4ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 1027ms (Views: 2.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 15:55:35 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.7ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 941ms (Views: 4.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 15:57:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (64.0ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 408.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 452.2ms | GC: 0.2ms)
+Completed 200 OK in 3015ms (Views: 104.2ms | ActiveRecord: 367.9ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 15:57:37 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 16.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | GC: 0.0ms)
+Completed 200 OK in 1333ms (Views: 22.1ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 15:59:06 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (2.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 229.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 237.9ms | GC: 0.0ms)
+Completed 200 OK in 1239ms (Views: 48.8ms | ActiveRecord: 198.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:01:59 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (2.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 221.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 229.6ms | GC: 0.0ms)
+Completed 200 OK in 1160ms (Views: 56.1ms | ActiveRecord: 181.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:02:08 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 11.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | GC: 0.0ms)
+Completed 200 OK in 1013ms (Views: 24.8ms | ActiveRecord: 4.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:02:43 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  Rendered coins/index.html.erb within layouts/application (Duration: 20.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 973ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `coin' for an instance of #<Class:0x00000160836b8b60>)
+Caused by: NameError (undefined local variable or method `coin' for an instance of #<Class:0x00000160836b8b60>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `coin' for an instance of #<Class:0x00000160836b8b60>):
+    2: 
+    3: <% content_for :title, "Coins" %>
+    4: 
+    5: <h1><%= t(coin) %></h1>
+    6: 
+    7: <table>
+    8: 
+  
+app/views/coins/index.html.erb:5
+
+Information for cause: NameError (undefined local variable or method `coin' for an instance of #<Class:0x00000160836b8b60>):
+  
+app/views/coins/index.html.erb:5
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-09-01 16:02:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:02:53 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 187.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 194.8ms | GC: 0.0ms)
+Completed 200 OK in 1145ms (Views: 23.1ms | ActiveRecord: 179.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:03:13 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | GC: 0.0ms)
+Completed 200 OK in 1090ms (Views: 23.8ms | ActiveRecord: 3.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:09:16 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (71.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 107.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 116.2ms | GC: 0.0ms)
+Completed 200 OK in 1080ms (Views: 53.1ms | ActiveRecord: 71.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:11:25 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.8ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 217.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 225.2ms | GC: 0.0ms)
+Completed 200 OK in 1169ms (Views: 24.4ms | ActiveRecord: 209.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:11:35 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 190.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 198.8ms | GC: 0.0ms)
+Completed 200 OK in 1157ms (Views: 23.4ms | ActiveRecord: 183.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/new" for 127.0.0.1 at 2025-09-01 16:11:38 -0300
+Processing by CoinsController#new as HTML
+  [1m[36mMiningType Pluck (18.7ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='new',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 8.8ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 12.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 0.0ms)
+Completed 200 OK in 1106ms (Views: 14.7ms | ActiveRecord: 70.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:12:17 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 16.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | GC: 0.0ms)
+Completed 200 OK in 1006ms (Views: 34.6ms | ActiveRecord: 6.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:13:04 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.9ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 206.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 214.6ms | GC: 0.0ms)
+Completed 200 OK in 1141ms (Views: 44.3ms | ActiveRecord: 178.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:13:31 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 25.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | GC: 0.0ms)
+Completed 200 OK in 1023ms (Views: 38.8ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:13:39 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 955ms (Views: 5.4ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/new" for 127.0.0.1 at 2025-09-01 16:13:45 -0300
+Processing by CoinsController#new as HTML
+  [1m[36mMiningType Pluck (1.1ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='new',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 1196ms (Views: 7.4ms | ActiveRecord: 63.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:13:47 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 214.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 223.1ms | GC: 0.0ms)
+Completed 200 OK in 1211ms (Views: 53.8ms | ActiveRecord: 178.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-01 16:13:49 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-09-01 16:13:49 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-01 16:13:49 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-01 16:13:49 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-01 16:13:50 -0300
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-01 16:13:50 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-01 16:13:50 -0300
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:14:33 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 27.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | GC: 0.0ms)
+Completed 200 OK in 955ms (Views: 41.0ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:15:34 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 187.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 195.7ms | GC: 0.0ms)
+Completed 200 OK in 1160ms (Views: 24.0ms | ActiveRecord: 179.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:15:59 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (2.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 210.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 217.9ms | GC: 0.0ms)
+Completed 200 OK in 1147ms (Views: 45.9ms | ActiveRecord: 180.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-01 16:16:01 -0300
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:16:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT [schema_migrations].[version] FROM [schema_migrations] ORDER BY [schema_migrations].[version] ASC /*application='CryptoWallet'*/[0m
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (76.1ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 298.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 333.5ms | GC: 990.2ms)
+Completed 200 OK in 2237ms (Views: 84.1ms | ActiveRecord: 266.1ms (1 query, 0 cached) | GC: 990.2ms)
+
+
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-01 16:16:27 -0300
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 16:19:47 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 198.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 206.8ms | GC: 0.0ms)
+Completed 200 OK in 1196ms (Views: 24.3ms | ActiveRecord: 190.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:20:01 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (2.0ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 20.3ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | GC: 0.2ms)
+Completed 200 OK in 952ms (Views: 21.8ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:22:24 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 35.5ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 40.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1175ms (ActiveRecord: 201.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `acronym' for an instance of #<Class:0x000002648480e4c8>)
+Caused by: NameError (undefined local variable or method `acronym' for an instance of #<Class:0x000002648480e4c8>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `acronym' for an instance of #<Class:0x000002648480e4c8>):
+     5:   </p>
+     6: 
+     7:   <p>
+     8:     <strong><%= t(acronym)%>:</strong>
+     9:     <%= coin.acronym %>
+    10:   </p>
+    11: 
+  
+app/views/coins/_coin.html.erb:8
+app/views/coins/show.html.erb:3
+
+Information for cause: NameError (undefined local variable or method `acronym' for an instance of #<Class:0x000002648480e4c8>):
+  
+app/views/coins/_coin.html.erb:8
+app/views/coins/show.html.erb:3
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-09-01 16:22:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:22:34 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 12.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1170ms (ActiveRecord: 183.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `url_image' for an instance of #<Class:0x000002648479a320>)
+Caused by: NameError (undefined local variable or method `url_image' for an instance of #<Class:0x000002648479a320>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `url_image' for an instance of #<Class:0x000002648479a320>):
+    10:   </p>
+    11: 
+    12:   <p>
+    13:     <strong><%= t(url_image)%>:</strong>
+    14:     <%= coin.url_image %>
+    15:   </p>
+    16: 
+  
+app/views/coins/_coin.html.erb:13
+app/views/coins/show.html.erb:3
+
+Information for cause: NameError (undefined local variable or method `url_image' for an instance of #<Class:0x000002648479a320>):
+  
+app/views/coins/_coin.html.erb:13
+app/views/coins/show.html.erb:3
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:22:43 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 13.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | GC: 0.0ms)
+Completed 200 OK in 999ms (Views: 31.6ms | ActiveRecord: 4.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:26:04 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (Duration: 24.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1154ms (ActiveRecord: 179.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @coin %>
+
+<div>
+  <%= link_to <%= t(edit.coin) %>, edit_coin_path(@coin) %> |
+  <%= link_to <%= t(back.coins)%>, coins_path %>
+
+  <%= button_to <%= t(crud.delete)%>, @coin, method: :delete %>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @coin %>
+
+<div>
+  <%= link_to <%= t(edit.coin) %>, edit_coin_path(@coin) %> |
+  <%= link_to <%= t(back.coins)%>, coins_path %>
+
+  <%= button_to <%= t(crud.delete)%>, @coin, method: :delete %>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @coin %>
+4:    
+5:    <div>
+6:      <%= link_to <%= t(edit.coin) %>, edit_coin_path(@coin) %> |
+7:      <%= link_to <%= t(back.coins)%>, coins_path %>
+8:    
+9:      <%= button_to <%= t(crud.delete)%>, @coin, method: :delete %>
+10:    </div>
+  
+app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:26:27 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 984ms (ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @coin %>
+
+<div>
+  <%= link_to <%= t('edit.coin') %>, edit_coin_path(@coin) %> |
+  <%= link_to <%= t('back.coins')%>, coins_path %>
+
+  <%= button_to <%= t('crud.delete')%>, @coin, method: :delete %>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @coin %>
+
+<div>
+  <%= link_to <%= t('edit.coin') %>, edit_coin_path(@coin) %> |
+  <%= link_to <%= t('back.coins')%>, coins_path %>
+
+  <%= button_to <%= t('crud.delete')%>, @coin, method: :delete %>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @coin %>
+4:    
+5:    <div>
+6:      <%= link_to <%= t('edit.coin') %>, edit_coin_path(@coin) %> |
+7:      <%= link_to <%= t('back.coins')%>, coins_path %>
+8:    
+9:      <%= button_to <%= t('crud.delete')%>, @coin, method: :delete %>
+10:    </div>
+  
+app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/coins/show.html.erb:13: syntax error, unexpected `end', expecting ')'
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:28:25 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 32.6ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 37.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | GC: 0.0ms)
+Completed 200 OK in 1178ms (Views: 54.7ms | ActiveRecord: 190.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:29:22 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 0.0ms)
+Completed 200 OK in 1193ms (Views: 22.5ms | ActiveRecord: 182.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:29:34 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | GC: 0.0ms)
+Completed 200 OK in 989ms (Views: 22.4ms | ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1" for 127.0.0.1 at 2025-09-01 16:29:49 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 951ms (Views: 23.4ms | ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 16:30:15 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.9ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (18.3ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 9.0ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 15.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 0.0ms)
+Completed 200 OK in 1140ms (Views: 17.6ms | ActiveRecord: 86.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:46:45 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (92.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.8ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1100ms (ActiveRecord: 94.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "Editing coin" %>
+
+<h1><%= t('edit.coin)'%></h1>
+
+<%= render "form", coin: @coin %>
+
+<br>
+
+<div>
+  <%= link_to t('crud.show'), @coin %> |
+  <%= link_to t('back.coin'), coins_path %>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/edit.html.erb:15: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "Editing coin" %>
+
+<h1><%= t('edit.coin)'%></h1>
+
+<%= render "form", coin: @coin %>
+
+<br>
+
+<div>
+  <%= link_to t('crud.show'), @coin %> |
+  <%= link_to t('back.coin'), coins_path %>
+</div>
+
+):
+1:    <% content_for :title, "Editing coin" %>
+2:    
+3:    <h1><%= t('edit.coin)'%></h1>
+4:    
+5:    <%= render "form", coin: @coin %>
+6:    
+7:    <br>
+8:    
+9:    <div>
+10:      <%= link_to t('crud.show'), @coin %> |
+11:      <%= link_to t('back.coin'), coins_path %>
+12:    </div>
+  
+app/views/coins/edit.html.erb:15: syntax error, unexpected `end', expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/edit.html.erb:15: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/coins/edit.html.erb:15: syntax error, unexpected `end', expecting ')'
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:48:32 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (0.8ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 8.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | GC: 0.0ms)
+Completed 200 OK in 1271ms (Views: 26.1ms | ActiveRecord: 323.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 17:48:37 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.9ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 906ms (Views: 5.1ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:48:52 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (0.5ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 950ms (Views: 22.4ms | ActiveRecord: 5.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:49:51 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.6ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.2ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 37.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1238ms (ActiveRecord: 292.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :t(description), style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+..._buffer.append=( form.label :t(description), style: "display...
+...                              ^
+C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :t(description), style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: coin) do |form| %>
+2:      <% if coin.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% coin.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :t(description), style: "display: block" %>
+16:        <%= form.text_field :description %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :acronym, style: "display: block" %>
+21:        <%= form.text_field :acronym %>
+22:      </div>
+23:    
+24:      <div class ="field">
+25:        <%= form.label :url_image, style: "display: block" %>
+26:        <%= form.text_field :url_image %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :mining_type_id, style: "display: block" %>
+31:        <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit %>
+36:      </div>
+37:    <% end %>
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+app/views/coins/edit.html.erb:5
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+..._buffer.append=( form.label :t(description), style: "display...
+...                              ^
+C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+          end
+          ^~~
+):
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+app/views/coins/edit.html.erb:5
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:50:03 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (0.4ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 38.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 943ms (ActiveRecord: 5.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :t('descriptio'), style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+..._buffer.append=( form.label :t('descriptio'), style: "displa...
+...                              ^
+C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+          end
+          ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :t('descriptio'), style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: coin) do |form| %>
+2:      <% if coin.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% coin.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :t('descriptio'), style: "display: block" %>
+16:        <%= form.text_field :description %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :acronym, style: "display: block" %>
+21:        <%= form.text_field :acronym %>
+22:      </div>
+23:    
+24:      <div class ="field">
+25:        <%= form.label :url_image, style: "display: block" %>
+26:        <%= form.text_field :url_image %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :mining_type_id, style: "display: block" %>
+31:        <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit %>
+36:      </div>
+37:    <% end %>
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+app/views/coins/edit.html.erb:5
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+..._buffer.append=( form.label :t('descriptio'), style: "displa...
+...                              ^
+C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+          end
+          ^~~
+):
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected '(', expecting ')'
+app/views/coins/_form.html.erb:39: syntax error, unexpected `end'
+app/views/coins/edit.html.erb:5
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:50:17 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (0.3ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 5.6ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 41.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | GC: 0.0ms)
+Completed 200 OK in 968ms (Views: 57.0ms | ActiveRecord: 5.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:50:52 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.1ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 40.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | GC: 0.0ms)
+Completed 200 OK in 1237ms (Views: 56.5ms | ActiveRecord: 295.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:51:20 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (0.3ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 36.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 944ms (ActiveRecord: 5.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :'t('description')', style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected local variable or method, expecting ')'
+...d=( form.label :'t('description')', style: "display: block" ...
+...                    ^~~~~~~~~~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :'t('description')', style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: coin) do |form| %>
+2:      <% if coin.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% coin.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :'t('description')', style: "display: block" %>
+16:        <%= form.text_field :description %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :acronym, style: "display: block" %>
+21:        <%= form.text_field :acronym %>
+22:      </div>
+23:    
+24:      <div class ="field">
+25:        <%= form.label :url_image, style: "display: block" %>
+26:        <%= form.text_field :url_image %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :mining_type_id, style: "display: block" %>
+31:        <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit %>
+36:      </div>
+37:    <% end %>
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected local variable or method, expecting ')'
+app/views/coins/edit.html.erb:5
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected local variable or method, expecting ')'
+...d=( form.label :'t('description')', style: "display: block" ...
+...                    ^~~~~~~~~~~
+):
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected local variable or method, expecting ')'
+app/views/coins/edit.html.erb:5
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:51:37 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.2ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 34.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 1230ms (ActiveRecord: 305.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label = t('description'), style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected label
+...abel = t('description'), style: "display: block" ); @output_...
+...                         ^~~~~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: coin) do |form| %>
+  <% if coin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+        <% coin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label = t('description'), style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class ="field">
+    <%= form.label :url_image, style: "display: block" %>
+    <%= form.text_field :url_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: coin) do |form| %>
+2:      <% if coin.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% coin.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label = t('description'), style: "display: block" %>
+16:        <%= form.text_field :description %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :acronym, style: "display: block" %>
+21:        <%= form.text_field :acronym %>
+22:      </div>
+23:    
+24:      <div class ="field">
+25:        <%= form.label :url_image, style: "display: block" %>
+26:        <%= form.text_field :url_image %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :mining_type_id, style: "display: block" %>
+31:        <%= form.select("mining_type_id", @mining_type_options, {include_blank: 'select...'} ) %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit %>
+36:      </div>
+37:    <% end %>
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected label
+app/views/coins/edit.html.erb:5
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (C:/Users/Deivao/OneDrive - Educacional/Documentos/Personal/Estudo/RUBY/Ruby on Rails/projects/crypto_wallet/crypto_wallet/app/views/coins/_form.html.erb:15: syntax error, unexpected label
+...abel = t('description'), style: "display: block" ); @output_...
+...                         ^~~~~~
+):
+  
+app/views/coins/_form.html.erb:15: syntax error, unexpected label
+app/views/coins/edit.html.erb:5
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:52:51 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.0ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 38.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | GC: 0.0ms)
+Completed 200 OK in 1222ms (Views: 55.5ms | ActiveRecord: 294.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-09-01 17:55:53 -0300
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-01 17:55:53 -0300
+Started GET "/assets/stimulus.min-2395e199.js.map" for 127.0.0.1 at 2025-09-01 17:55:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/assets/turbo.min-02fd5b81.js.map" for 127.0.0.1 at 2025-09-01 17:55:53 -0300
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:56:42 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.4ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.1ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 69.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | GC: 0.0ms)
+Completed 200 OK in 1270ms (Views: 90.3ms | ActiveRecord: 286.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-01 17:56:44 -0300
+Started GET "/assets/turbo.min-02fd5b81.js.map" for 127.0.0.1 at 2025-09-01 17:56:45 -0300
+Started GET "/assets/stimulus.min-2395e199.js.map" for 127.0.0.1 at 2025-09-01 17:56:45 -0300
+Started GET "/coins/1/edit" for 127.0.0.1 at 2025-09-01 17:57:08 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.5ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 1 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  [1m[36mMiningType Pluck (1.0ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='edit',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered coins/edit.html.erb within layouts/application (Duration: 38.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | GC: 0.0ms)
+Completed 200 OK in 1281ms (Views: 54.5ms | ActiveRecord: 279.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-09-01 17:57:10 -0300
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-01 17:57:10 -0300
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-01 17:57:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-01 17:57:10 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-01 17:57:10 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-09-01 17:57:10 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-01 17:57:11 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-01 17:57:11 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-01 17:57:11 -0300
+Started GET "/assets/turbo.min-02fd5b81.js.map" for 127.0.0.1 at 2025-09-01 17:57:11 -0300
+Started GET "/assets/stimulus.min-2395e199.js.map" for 127.0.0.1 at 2025-09-01 17:57:11 -0300
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 17:57:25 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 928ms (Views: 6.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-01 17:57:26 -0300
+Started GET "/coins/new" for 127.0.0.1 at 2025-09-01 17:57:28 -0300
+Processing by CoinsController#new as HTML
+  [1m[36mMiningType Pluck (1.0ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='new',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 994ms (Views: 4.9ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/coins/new" for 127.0.0.1 at 2025-09-01 17:59:13 -0300
+Processing by CoinsController#new as HTML
+  [1m[36mMiningType Pluck (1.1ms)[0m  [1m[34mSELECT [mining_types].[description], [mining_types].[id] FROM [mining_types] /*action='new',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:68:in `set_mining_type_options'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered coins/new.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 1190ms (Views: 22.0ms | ActiveRecord: 277.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2025-09-01 17:59:14 -0300
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-01 17:59:14 -0300
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-01 17:59:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/turbo.min-02fd5b81.js.map" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/assets/stimulus.min-2395e199.js.map" for 127.0.0.1 at 2025-09-01 17:59:15 -0300
+Started GET "/coins" for 127.0.0.1 at 2025-09-01 17:59:35 -0300
+Processing by CoinsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (19.0ms)[0m  [1m[34mSELECT [coins].* FROM [coins] /*action='index',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/views/coins/index.html.erb:19
+  Rendered coins/index.html.erb within layouts/application (Duration: 23.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | GC: 0.0ms)
+Completed 200 OK in 939ms (Views: 5.8ms | ActiveRecord: 19.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-09-01 17:59:36 -0300
+Started GET "/coins/3" for 127.0.0.1 at 2025-09-01 17:59:36 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT [coins].* FROM [coins] WHERE [coins].[id] = 3 ORDER BY [coins].[id] ASC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY /*action='show',application='CryptoWallet',controller='coins'*/[0m
+  ↳ app/controllers/coins_controller.rb:64:in `set_coin'
+  Rendering layout layouts/application.html.erb
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/_coin.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered coins/show.html.erb within layouts/application (Duration: 6.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 977ms (Views: 7.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+

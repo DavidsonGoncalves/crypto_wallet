@@ -2,9 +2,14 @@
 
 <%= render @coin %>
 
-<div>
-  <%= link_to "Edit this coin", edit_coin_path(@coin) %> |
-  <%= link_to "Back to coins", coins_path %>
+<div class="actions">
 
-  <%= button_to "Destroy this coin", @coin, method: :delete %>
+  <%= link_to t('edit.coin'), edit_coin_path(@coin) %> |
+  <%= link_to t('back.coins'), coins_path %>
+
+</div>
+<br>
+<div class="field">
+
+<%= button_to t('crud.delete'), @coin, method: :delete %>
 </div>

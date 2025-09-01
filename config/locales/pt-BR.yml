@@ -1,0 +1,28 @@
+pt-BR:
+  crud:
+    show: "Mostrar"
+    create: "Criar"
+    edit: "Editar"
+    new: "Novo"
+    back: "Voltar"
+    submit: "Salvar"
+    delete: "Deletar"
+    confirm_delete: "Você tem certeza que deseja deletar?"
+
+  name: "Nome"
+  acronym: "Sigla"
+  url_image: "URL da Imagem"
+  coins: "Criptomoedas"
+  welcome: "Bem-vindo ao Crypto Wallet"
+  hello: "Olá"
+  symbol: "Sígla"
+  image: "Logo"
+  desctiption: "Descrição"
+  mining_type: "Tipo de Mineração"
+
+  new:
+    coin: "Nova Criptomoeda"
+  edit:
+    coin: "Editar Criptomoeda"
+  back:
+    coins: "Voltar para Criptomoedas"

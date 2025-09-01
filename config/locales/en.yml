@@ -28,4 +28,33 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  crud:
+    create: Create
+    update: Update
+    destroy: Destroy
+    edit: Edit
+    new: New
+    back: Back
+    submit: Save
+    actions: Actions
+    show: Show
+    confirm_delete: Are you sure you want to delete?
+
+  name: Name
+  acronym: Acronym
+  url_image: Image URL
+  coins: Coins
+  welcome: Welcome to Crypto Wallet
+  hello: Hello
+  symbol: Symbol
+  image: Logo
+  desctiption: Description
+  mining_type: Mining Type
+
+  new:
+    coin: New Coin
+  edit:
+    coin: Edit Coin
+  back:
+    coins: Back to Coins
+
