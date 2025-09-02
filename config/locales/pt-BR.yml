@@ -1,4 +1,39 @@
 pt-BR:
+
+  #models
+  activerecord:
+    models:
+      coin:
+        one: "Criptomoeda"
+        other: "Criptomoedas"
+      mining_type:
+        one: "Tipo de Mineração"
+        other: "Tipos de Mineração"
+
+    attributes:
+
+      coin:
+        id: "Codigo de identificação"
+        updated_at: "Atualizado em"
+        created_at: "Criado em"
+        name: "Nome"
+        acronym: "Sigla"
+        url_image: "URL da Imagem"
+        symbol: "Sígla"
+        image: "Logo"
+        desctiption: "Descrição"
+        mining_type: "Tipo de Mineração"
+
+      mining_type:
+        name: "Nome"
+        acronym: "Sigla"
+        symbol: "Sígla"
+        id: "Codigo de identificação"
+        desctiption: "Descrição"
+        updated_at: "Atualizado em"
+        created_at: "Criado em"
+
+  #attributes
   crud:
     show: "Mostrar"
     create: "Criar"
@@ -26,3 +61,4 @@ pt-BR:
     coin: "Editar Criptomoeda"
   back:
     coins: "Voltar para Criptomoedas"
+
